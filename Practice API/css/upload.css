@@ -1,0 +1,323 @@
+@import url('./variable.css');
+
+/* ===================================
+   Upload Page
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background: var(--bg-primary);
+    font-family: var(--body-font);
+    color: var(--text-light);
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+.container{
+    max-width: 900px;
+}
+
+/* ===================================
+   Upload Card
+=================================== */
+
+.card{
+
+    width:100%;
+
+    max-width:700px;
+
+    background:var(--card-bg);
+
+    border:1px solid var(--border-color);
+
+    border-radius:var(--radius-lg);
+
+    overflow:hidden;
+
+    box-shadow:var(--card-shadow);
+}
+
+/* ===================================
+   Header
+=================================== */
+
+.card-header{
+
+    background:transparent;
+
+    border-bottom:1px solid var(--border-color);
+
+    padding:28px;
+}
+
+.card-header h2{
+
+    margin:0;
+
+    font-family:var(--heading-font);
+
+    font-size:38px;
+
+    color:var(--text-light);
+}
+
+.card-header h2::after{
+
+    content:".";
+
+    color:var(--primary-color);
+}
+
+/* ===================================
+   Card Body
+=================================== */
+
+.card-body{
+
+    padding:35px;
+}
+
+/* ===================================
+   File Upload
+=================================== */
+
+.form-control{
+
+    background:var(--input-bg)!important;
+
+    border:1px solid var(--border-color)!important;
+
+    color:var(--text-light)!important;
+
+    border-radius:var(--radius-md);
+
+    padding:14px 18px;
+
+    transition:var(--transition);
+}
+
+.form-control:focus{
+
+    background:var(--input-bg)!important;
+
+    border-color:var(--primary-color)!important;
+
+    box-shadow:0 0 0 .2rem rgba(212,175,55,.18)!important;
+}
+
+input[type=file]{
+
+    cursor:pointer;
+}
+
+input[type=file]::file-selector-button{
+
+    background:var(--primary-color);
+
+    color:#111;
+
+    border:none;
+
+    padding:10px 18px;
+
+    border-radius:var(--radius-md);
+
+    font-weight:600;
+
+    margin-right:16px;
+
+    transition:var(--transition);
+
+    cursor:pointer;
+}
+
+input[type=file]::file-selector-button:hover{
+
+    background:var(--primary-hover);
+}
+
+.uploaded-image{
+    display:none;
+
+    width:100%;
+    max-width:450px;
+    height:280px;
+
+    margin:25px auto 0;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    border:3px solid var(--primary-color);
+
+    box-shadow:var(--card-shadow);
+}
+/* ===================================
+   Upload Button
+=================================== */
+
+.btn-success{
+
+    width:100%;
+
+    background:var(--primary-color)!important;
+
+    color:#111!important;
+
+    border:none!important;
+
+    border-radius:var(--radius-md);
+
+    padding:14px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+}
+
+.btn-success:hover{
+
+    background:var(--primary-hover)!important;
+
+    transform:translateY(-2px);
+}
+
+/* ===================================
+   Divider
+=================================== */
+
+hr{
+
+    border-color:var(--border-color);
+
+    margin:35px 0;
+}
+
+/* ===================================
+   Uploaded Image
+=================================== */
+
+.card-body h5{
+
+    color:var(--text-light);
+
+    margin-bottom:20px;
+
+    font-weight:600;
+}
+
+#uploadedImage{
+
+    display:block;
+
+    margin:auto;
+
+    max-width:100%;
+
+    max-height:350px;
+
+    border-radius:var(--radius-md);
+
+    border:3px solid var(--primary-color);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.35);
+
+    object-fit:cover;
+
+    transition:var(--transition);
+}
+
+#uploadedImage:hover{
+
+    transform:scale(1.02);
+}
+
+/* ===================================
+   Footer
+=================================== */
+
+.card-footer{
+
+    background:transparent;
+
+    border-top:1px solid var(--border-color);
+
+    padding:25px;
+
+    text-align:center;
+}
+
+/* ===================================
+   Back Button
+=================================== */
+
+.btn-secondary{
+
+    background:transparent!important;
+
+    color:var(--text-light)!important;
+
+    border:1px solid var(--border-color)!important;
+
+    border-radius:var(--radius-md);
+
+    padding:12px 30px;
+
+    transition:var(--transition);
+}
+
+.btn-secondary:hover{
+
+    border-color:var(--primary-color)!important;
+
+    color:var(--primary-color)!important;
+
+    background:rgba(212,175,55,.06)!important;
+
+    transform:translateY(-2px);
+}
+
+/* ===================================
+   Responsive
+=================================== */
+
+@media(max-width:768px){
+
+.card{
+
+max-width:100%;
+
+}
+
+.card-header h2{
+
+font-size:32px;
+
+}
+
+.card-body{
+
+padding:25px;
+
+}
+
+.btn-secondary{
+
+width:100%;
+
+}
+
+}   

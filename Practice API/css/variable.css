@@ -1,0 +1,54 @@
+/* ==========================================
+   Google Fonts
+========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ==========================================
+   CSS Variables
+========================================== */
+:root {
+
+    /* Colors */
+    --primary-color: #D4AF37;   
+    --primary-hover: #EBC75B;
+
+    --bg-primary: #090F1D;
+    --bg-secondary: #101827;
+    --card-bg: #111827;
+    --input-bg: #0F172A;
+
+    --text-light: #FFFFFF;
+    --text-muted: #94A3B8;
+    --icon-color: #808EA8;
+
+    --border-color: #2E3A4D;
+
+    /* Typography */
+    --heading-font: 'Playfair Display', serif;
+    --body-font: 'Poppins', sans-serif;
+
+    /* Border Radius */
+    --radius-sm: 10px;
+    --radius-md: 12px;
+    --radius-lg: 25px;
+    --radius-round: 50%;
+
+    /* Effects */
+    --transition: all 0.3s ease;
+    --card-shadow: 0 25px 60px rgba(0, 0, 0, .45);
+}
+
+/* ==========================================
+   Global Styles
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-primary);
+    font-family: var(--body-font);
+}

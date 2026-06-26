@@ -1,0 +1,454 @@
+@import url('./variable.css');
+
+/* ===================================
+   Dashboard
+=================================== */
+
+body{
+
+    background:var(--bg-primary);
+
+    color:var(--text-light);
+
+    font-family:var(--body-font);
+
+    min-height:100vh;
+}
+
+/* ===============================
+Header
+=============================== */
+
+h1{
+    color: var(--primary-color);
+}
+
+/* ===============================
+Header Buttons
+=============================== */
+
+.header-actions{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+}
+
+.btn-outline-custom{
+
+    background:transparent;
+
+    color:var(--text-light);
+
+    border:1px solid var(--border-color);
+
+    border-radius:var(--radius-md);
+
+    padding:10px 20px;
+
+    transition:var(--transition);
+}
+
+.btn-outline-custom:hover{
+
+    border-color:var(--primary-color);
+
+    color:var(--primary-color);
+}
+
+.btn-gold{
+
+    background:var(--primary-color);
+
+    color:#000;
+
+    border:none;
+
+    border-radius:var(--radius-md);
+
+    padding:10px 24px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+}
+
+.btn-gold:hover{
+
+    background:var(--primary-hover);
+
+    transform:translateY(-2px);
+}
+
+/* ===================================
+   TaskFlow Button Theme
+=================================== */
+
+/* Profile Button */
+
+.btn-primary {
+    background: transparent !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-light) !important;
+    border-radius: var(--radius-md);
+    padding: 10px 22px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background: rgba(212, 175, 55, 0.08) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
+    transform: translateY(-2px);
+}
+
+/* Upload Button */
+
+.btn-success {
+    background: transparent !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-light) !important;
+    border-radius: var(--radius-md);
+    padding: 10px 22px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn-success:hover {
+    background: rgba(212, 175, 55, 0.08) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
+    transform: translateY(-2px);
+}
+
+/* Create Task Button */
+
+#taskForm .btn-primary {
+    background: var(--primary-color) !important;
+    color: #111 !important;
+    border: none !important;
+    font-weight: 600;
+    padding: 12px 28px;
+}
+
+#taskForm .btn-primary:hover {
+    background: var(--primary-hover) !important;
+    color: #111 !important;
+}
+
+/* Logout Button */
+
+#logoutBtn {
+    background: var(--primary-color) !important;
+    color: #111 !important;
+    border: none !important;
+    border-radius: var(--radius-md);
+    padding: 10px 22px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+#logoutBtn:hover {
+    background: var(--primary-hover) !important;
+    transform: translateY(-2px);
+}
+
+/* Delete Button inside cards */
+
+.btn-danger {
+    background: transparent !important;
+    border: 1px solid #dc3545 !important;
+    color: #dc3545 !important;
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+}
+
+.btn-danger:hover {
+    background: #dc3545 !important;
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+/* ===============================
+Cards
+=============================== */
+
+.dashboard-card{
+
+    background:var(--card-bg);
+
+    border-radius:var(--radius-lg);
+
+    padding:35px;
+
+    box-shadow:var(--card-shadow);
+}
+
+.card-title{
+
+    color:var(--text-light);
+
+    margin-bottom:25px;
+
+    font-weight:600;
+}
+
+/* ===============================
+Inputs
+=============================== */
+
+.form-control,
+.form-select{
+
+    background:var(--input-bg)!important;
+
+    border:1px solid var(--border-color);
+
+    color:var(--text-light)!important;
+
+    border-radius:var(--radius-md);
+
+    padding:14px 18px;
+}
+
+textarea{
+
+    width:100%;
+
+    min-height:140px;
+
+    resize:none;
+
+    background:var(--input-bg)!important;
+
+    border:1px solid var(--border-color);
+
+    color:white;
+
+    border-radius:var(--radius-md);
+
+    padding:16px;
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea:focus{
+
+    background:var(--input-bg);
+
+    border-color:var(--primary-color);
+
+    color:white;
+
+    box-shadow:0 0 0 .2rem rgba(212,175,55,.18);
+}
+
+::placeholder{
+
+    color:var(--text-muted)!important;
+}
+
+/* ===============================
+Task List
+=============================== */
+
+#taskList{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+}
+
+/* Your JS-generated cards will inherit these */
+
+.task-card{
+
+    background:var(--input-bg);
+
+    border-left:4px solid var(--primary-color);
+
+    padding:22px;
+
+    border-radius:var(--radius-md);
+
+    transition:var(--transition);
+}
+
+.task-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--card-shadow);
+}
+
+/* ===============================
+Responsive
+=============================== */
+
+@media(max-width:992px){
+
+.dashboard-title{
+
+font-size:34px;
+
+}
+
+.header-actions{
+
+justify-content:flex-start;
+
+margin-top:25px;
+
+}
+
+.dashboard-card{
+
+padding:25px;
+
+}
+
+}
+
+/* ===================================
+   Dynamic Task Cards (Generated by JS)
+=================================== */
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-left: 5px solid var(--primary-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .35);
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.card-body h5 {
+    color: var(--text-light);
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.card-body p {
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.card-body strong {
+    color: var(--primary-color);
+}
+
+/* ===================================
+   Status Badge
+=================================== */
+
+.badge {
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.bg-primary {
+    background: rgba(212, 175, 55, .15) !important;
+    color: var(--primary-color) !important;
+    border: 1px solid rgba(212, 175, 55, .35);
+}
+
+/* ===================================
+   Status Dropdown
+=================================== */
+
+.card .form-select {
+    flex: 1;
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-light);
+}
+
+.card .form-select option {
+    background: var(--card-bg);
+    color: var(--text-light);
+}
+
+/* ===================================
+   Delete Button
+=================================== */
+
+.btn-danger {
+    background: #dc3545;
+    border: none;
+    border-radius: var(--radius-md);
+    padding: 10px 18px;
+    transition: var(--transition);
+}
+
+.btn-danger:hover {
+    background: #bb2d3b;
+    transform: translateY(-2px);
+}
+
+/* ===================================
+   Task Action Area
+=================================== */
+
+.card .d-flex.gap-2 {
+    margin-top: 20px;
+    align-items: center;
+}
+
+/* ===================================
+   Empty Task Message
+=================================== */
+
+#taskList:empty::before {
+    content: "No tasks available.";
+    display: block;
+    text-align: center;
+    padding: 40px;
+    color: var(--text-muted);
+    font-size: 18px;
+}
+
+footer{
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+/* ===================================
+   Responsive
+=================================== */
+
+@media (max-width: 768px) {
+
+    .card .d-flex.gap-2 {
+        flex-direction: column;
+    }
+
+    .btn-danger {
+        width: 100%;
+    }
+
+    .card .form-select {
+        width: 100%;
+    }
+}

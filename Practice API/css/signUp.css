@@ -1,0 +1,226 @@
+
+@import url('./variable.css');
+/* ==========================================
+   Left Section
+========================================== */
+
+.left-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-primary);
+}
+
+.left-content {
+    width: 70%;
+}
+
+.logo {
+    width: 170px;
+    margin-bottom: 10px;
+}
+
+.hero-title {
+    font-family: var(--heading-font);
+    font-size: 55px;
+    line-height: 1.15;
+    color: var(--text-light);
+    margin-bottom: 55px;
+}
+
+.hero-title span {
+    color: var(--primary-color);
+}
+
+/* ==========================================
+   Feature Grid
+========================================== */
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid var(--primary-color);
+    border-radius: var(--radius-round);
+
+    color: var(--primary-color);
+    font-size: 25px;
+
+    margin-right: 18px;
+}
+
+.feature-item h6 {
+    color: var(--text-light);
+    margin: 0;
+}
+
+.feature-item small {
+    color: var(--text-muted);
+}
+
+/* ==========================================
+   Right Section
+========================================== */
+
+.right-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--bg-secondary);
+}
+
+.signup-card {
+    width: 470px;
+    padding: 50px;
+
+    background: var(--card-bg);
+
+    border-radius: var(--radius-lg);
+    box-shadow: var(--card-shadow);
+}
+
+.signup-card h2 {
+    font-family: var(--heading-font);
+    font-size: 46px;
+    color: var(--text-light);
+}
+
+.login-link {
+    color: var(--text-muted);
+    margin-bottom: 35px;
+}
+
+.login-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ==========================================
+   Input Fields
+========================================== */
+
+.input-group-custom {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 20px;
+    padding: 0 18px;
+
+    background: var(--input-bg);
+
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+}
+
+.input-group-custom i {
+    color: var(--icon-color);
+    font-size: 18px;
+}
+
+.input-group-custom input {
+    border: none !important;
+    background: transparent !important;
+    color: var(--text-light) !important;
+    box-shadow: none !important;
+}
+
+.input-group-custom input::placeholder {
+    color: var(--text-muted);
+}
+
+/* ==========================================
+   Gender Selection
+========================================== */
+
+.gender-title {
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+
+.gender-box {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.gender-option {
+    flex: 1;
+
+    padding: 13px;
+
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+
+    text-align: center;
+    color: var(--text-light);
+
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.gender-option:hover {
+    border-color: var(--primary-color);
+}
+
+/* ==========================================
+   Buttons
+========================================== */
+
+.signup-btn {
+    width: 100%;
+    padding: 15px;
+
+    background: var(--primary-color);
+    color: #000;
+
+    border: none;
+    border-radius: var(--radius-md);
+
+    font-weight: 700;
+    letter-spacing: .5px;
+
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.signup-btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width: 992px) {
+
+    .left-section {
+        display: none;
+    }
+
+    .signup-card {
+        width: 90%;
+        padding: 35px;
+    }
+
+    .signup-card h2 {
+        font-size: 36px;
+    }
+}

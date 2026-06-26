@@ -1,0 +1,212 @@
+@import url('./variable.css');
+
+/* Reuse your variables.css */
+
+.left-section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:var(--bg-primary);
+}
+
+.left-content{
+    width:70%;
+}
+
+.logo{
+    width:170px;
+    margin-bottom:10px;
+}
+
+.hero-title{
+    font-family:var(--heading-font);
+    color:var(--text-light);
+    font-size:58px;
+    line-height:1.15;
+    margin-bottom:55px;
+}
+
+.hero-title span{
+    color:var(--primary-color);
+}
+
+.feature-list{
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+}
+
+.feature{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.feature i{
+
+    width:60px;
+    height:60px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border:1px solid var(--primary-color);
+    border-radius:50%;
+
+    color:var(--primary-color);
+
+    font-size:22px;
+}
+
+.feature h6{
+
+    color:white;
+    margin:0;
+}
+
+.feature small{
+
+    color:var(--text-muted);
+}
+
+.right-section{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:var(--bg-secondary);
+}
+
+.login-card{
+
+    width:470px;
+    padding:50px;
+
+    background:var(--card-bg);
+
+    border-radius:var(--radius-lg);
+
+    box-shadow:var(--card-shadow);
+}
+
+.login-card h2{
+
+    font-family:var(--heading-font);
+
+    color:white;
+
+    font-size:48px;
+}
+
+.subtitle{
+
+    color:var(--text-muted);
+
+    margin-bottom:35px;
+}
+
+.input-group-custom{
+
+    display:flex;
+    align-items:center;
+
+    margin-bottom:20px;
+
+    padding:0 18px;
+
+    background:var(--input-bg);
+
+    border:1px solid var(--border-color);
+
+    border-radius:var(--radius-md);
+}
+
+.input-group-custom i{
+
+    color:var(--icon-color);
+
+    font-size:18px;
+}
+
+.input-group-custom input{
+
+    border:none!important;
+    background:transparent!important;
+    color:white!important;
+    box-shadow:none!important;
+}
+
+.input-group-custom input::placeholder{
+
+    color:var(--text-muted);
+}
+
+.login-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    background:var(--primary-color);
+
+    color:#000;
+
+    border:none;
+
+    border-radius:var(--radius-md);
+
+    font-weight:700;
+
+    transition:var(--transition);
+}
+
+.login-btn:hover{
+
+    background:var(--primary-hover);
+
+    transform:translateY(-2px);
+}
+
+.signup-link{
+
+    text-align:center;
+
+    margin-top:28px;
+
+    color:var(--text-muted);
+}
+
+.signup-link a{
+
+    color:var(--primary-color);
+
+    text-decoration:none;
+
+    font-weight:600;
+}
+
+@media(max-width:992px){
+
+.left-section{
+
+display:none;
+
+}
+
+.login-card{
+
+width:90%;
+
+padding:35px;
+
+}
+
+.login-card h2{
+
+font-size:36px;
+
+}
+
+}
