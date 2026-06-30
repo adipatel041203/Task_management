@@ -1,0 +1,34 @@
+- Git can be initialized in a two way either locally or remote repository
+- git clone(link) to extract git code locally
+- git status - to check git status (which file is modified)
+- git add -all , git add -A : stage every single change across the entire project
+- git add . : stage changes within the current directory you're in.
+- git add * : stages new or modified files not deleted files
+- git reset : only brings back changes not actual files
+- git reset --hard : brings back actual(deleted) files as well
+-  git rm --cached four.txt : only removes it from stages
+-  git rm --force four.txt : completely deletes the file
+- In git we can create multiple branches (staging ,development ,frontend ,backend) and work on them separately without ruining main branch.
+-  git branch : to list out branches
+- git branch [name of branch] : to create new branch
+- git checkout [name of branch] : to get into created branch
+- after adding files in new branch when we switch back to main branch we can not see changes there.(no duplication/conflict) (commit is mandatory before switching to new branch)
+-(in development branch) git merge main : To merge main into development branch
+-  Do same thing in main branch to merge both branches
+- when we made change in line of a file in both the directory then a conflict occurs it does not decide which line should be keep.
+-  In that case erase the unwanted line and do commit conflict will be solved
+-   git diff [01ae149] [d63c507] : To compare commit ids (we can see which line was deleted and which one was inserted)
+-  when we made any changes in local repository and want to send it to remote repository that's called push.
+- when we made any changes in remote repository and want to send it to local repository that's called fetch. but not merging them yet.
+- pull means : fetching + merging - so working directory immediately reflects  remote changes.
+-   git push origin main : To push local main repository to main repository of remote
+-  git fetch : to fetch changes made in remote repository (but does not appear)
+- git merge : to see the changes made in remote repository
+- git pull : to fetch and display changes made in remote repository
+- git restore : to undo local un committed changes 
+-  git restore --staged [file name/directory/.] : to reverse that file/directory/repository into previous state
+- git stash pop : restores recently staged work (brings your changes back and removes it from stash list) 
+- git stash apply : stays recently staged work for future (brings your changes back but keep it in stash list for future)  
+-  git revert : does not delete faulty commit it fix it through new one
+- 
+
